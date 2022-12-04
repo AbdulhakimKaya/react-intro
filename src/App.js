@@ -4,6 +4,11 @@ import Header from "./components/Header";
 import Login from "./components/Login";
 import User from "./components/User";
 import User2 from "./components/User2";
+import Counter from "./components/Counter";
+import User3 from "./components/User3";
+import Colors from "./components/Colors";
+import Form from "./components/Form";
+import Form2 from "./components/Form2";
 
 
 const name = "Abdulhakim";
@@ -26,6 +31,7 @@ function App() {
 
           {/*koşullu ifadelerinin ilk kullanımı*/}
           {
+              // eslint-disable-next-line jsx-a11y/anchor-is-valid
              isLoggedIn ? (<div>Hoşgeldiniz {fullName} </div>) : (<a href="#"> Giriş yapınız! </a>)
           }
 
@@ -58,6 +64,16 @@ function App() {
               age: 22,
               city: "Elazığ"
           }} friends={["Sidar", "Kerem"]}></User2>
+
+          <Counter/>
+
+          <User3/>
+
+          <Colors/>
+
+          <Form/>
+
+          <Form2/>
       </React.Fragment>
   );
 }
