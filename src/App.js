@@ -1,24 +1,42 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import Header from "./components/Header";
+import Login from "./components/Login";
+
+
+const name = "Abdulhakim";
+let surname = "KAYA";
+
+const isLoggedIn = false;
+const fullName = "Abdulhakim KAYA"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <React.Fragment>
+        {name} {surname}
+
+        {/*koşullu ifadelerinin ilk kullanımı*/}
+        {
+          isLoggedIn ? (<div>Hoşgeldiniz {fullName} </div>) : (<a href="#"> Giriş yapınız! </a>)
+        }
+
+        {/*koşullu ifadelerinin ikinci kullanımı*/}
+        {
+          isLoggedIn && <div>Hoşgeldiniz {fullName} </div>
+        }
+
+        {
+          !isLoggedIn && <div> Giriş yapınız </div>
+        }
+
+
+          {
+              isLoggedIn ? (<div>Hoşgeldiniz {fullName} </div>) : (<Login/>)
+          }
+
+        <div>Hello</div>
+        <Header/>
+      </React.Fragment>
   );
 }
 
