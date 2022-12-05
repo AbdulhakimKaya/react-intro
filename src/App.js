@@ -9,6 +9,7 @@ import User3 from "./components/User3";
 import Colors from "./components/Colors";
 import Form from "./components/Form";
 import Form2 from "./components/Form2";
+import Users from "./components/Users";
 
 
 const name = "Abdulhakim";
@@ -77,6 +78,8 @@ function App() {
             <Form/>
 
             <Form2/>
+
+            <Users/>
         </React.Fragment>
     );
 }
